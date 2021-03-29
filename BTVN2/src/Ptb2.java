@@ -4,6 +4,7 @@ public class Ptb2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double a;
+        System.out.println("Tính ax^2 +bx +c =0");
         System.out.println("Mời Bạn Nhập Hệ Số a :(Lưu ý a != 0)");
         do {
            
