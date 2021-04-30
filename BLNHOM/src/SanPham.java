@@ -13,6 +13,14 @@ public class SanPham {
 
 
 
+     
+
+
+
+     public SanPham() {
+     }
+
+
      public SanPham(String maSP, String ten, String moTa, long giaNhap, long giaBan, int soLuongTon, int soLuongBan,
                String hang, String danhMuc) {
           this.maSP = maSP;
