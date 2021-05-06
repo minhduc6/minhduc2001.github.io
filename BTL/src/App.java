@@ -4,7 +4,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
         ListSach ls = new ListSach();
-        int luachon;
+        
         while (true) {
             new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
             System.out.println("======================Menu========================");
@@ -24,7 +24,19 @@ public class App {
             System.out.println("14.Top 10 Quyển Sách Còn Nhiều Trong Kho :");
             System.out.println("15.Đề Xuất  5  Cuốn Sách Cho Bạn Hôm Nay :");
             System.out.println("Mời Nhập Lựa Chọn Của Bạn :");
-            luachon = Integer.parseInt(sc.nextLine());
+            int luachon = 0;
+            try {
+                  luachon = Integer.parseInt(sc.nextLine());
+            } catch (Exception e) {
+                //TODO: handle exception
+                System.out.println("Nhập Đúng Định Dạng");
+                new ProcessBuilder("cmd", "/c", "pause").inheritIO().start().waitFor();
+            }
+
+            while (luachon < 0 || luachon > 15) {
+                System.out.println("Nhập Đúng Option mà Bạn Lựa Chọn :");
+                luachon = Integer.parseInt(sc.nextLine());
+            }
             switch (luachon) {
                 case 1:
                 ls.output();

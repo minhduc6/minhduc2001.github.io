@@ -10,8 +10,8 @@ public class Sach implements Serializable {
      private String tacGia;
      private String nhaCungCap;
      private String nhaXuatBan;
-     private double giaNhap;
-     private double giaBan;
+     private long giaNhap;
+     private long giaBan;
      private String danhGia;
      private int soLuongBan;
      private int soLuongKho;
@@ -25,8 +25,8 @@ public class Sach implements Serializable {
      
 
 
-     public Sach(String maSach, String tenSach, String tacGia, String nhaCungCap, String nhaXuatBan, double giaNhap,
-               double giaBan, String danhGia, int soLuongBan, int soLuongKho, String danhMuc) {
+     public Sach(String maSach, String tenSach, String tacGia, String nhaCungCap, String nhaXuatBan, long giaNhap,
+               long giaBan, String danhGia, int soLuongBan, int soLuongKho, String danhMuc) {
           this.maSach = maSach;
           this.tenSach = tenSach;
           this.tacGia = tacGia;
@@ -135,7 +135,7 @@ public class Sach implements Serializable {
 
 
 
-     public void setGiaNhap(double giaNhap) {
+     public void setGiaNhap(long giaNhap) {
           this.giaNhap = giaNhap;
      }
 
@@ -151,7 +151,7 @@ public class Sach implements Serializable {
 
 
 
-     public void setGiaBan(double giaBan) {
+     public void setGiaBan(long giaBan) {
           this.giaBan = giaBan;
      }
 
@@ -237,9 +237,9 @@ public class Sach implements Serializable {
           System.out.println("Nhập Nhà Xuất Bản :");
           nhaXuatBan = sc.nextLine();
           System.out.println("Nhập Giá Nhập Của Sách :");
-          giaNhap = Double.parseDouble(sc.nextLine());
+          giaNhap = Long.parseLong(sc.nextLine());
           System.out.println("Nhập Giá Bán Của Sách :");
-          giaBan = Double.parseDouble(sc.nextLine());
+          giaBan = Long.parseLong(sc.nextLine());
           System.out.println("Nhập Đánh Giá Của Cuốn Sách :");
           danhGia = sc.nextLine();
           System.out.println("Nhập Số Lượng Bán của Sách :");

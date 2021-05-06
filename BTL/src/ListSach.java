@@ -45,8 +45,8 @@ public class ListSach {
                          sach.setTacGia(splitString[2].trim());
                          sach.setNhaCungCap(splitString[3].trim());
                          sach.setNhaXuatBan(splitString[4].trim());
-                         sach.setGiaNhap(Double.parseDouble(splitString[5].trim()));
-                         sach.setGiaBan(Double.parseDouble(splitString[6].trim()));
+                         sach.setGiaNhap(Long.parseLong(splitString[5].trim()));
+                         sach.setGiaBan(Long.parseLong(splitString[6].trim()));
                          sach.setDanhGia(splitString[7]);
                          sach.setSoLuongBan(Integer.parseInt(splitString[8].trim()));
                          sach.setSoLuongKho(Integer.parseInt(splitString[9].trim()));
@@ -257,6 +257,7 @@ public class ListSach {
                          case 1:
                               SachList.set(i, book);
                               System.out.println("Chúc Mừng Bạn Đã Sửa Thành Công");
+                              SachList.get(i).show();
                               break;
 
                          default:
@@ -279,6 +280,7 @@ public class ListSach {
           Sach book = new Sach();
           book.input();
           SachList.add(book);
+          book.show();
      }
 
      public void vaoFile()
